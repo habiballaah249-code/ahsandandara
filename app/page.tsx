@@ -8,7 +8,7 @@ export default function App() {
   // Anda bisa mengganti data ini dengan foto pribadi Anda
   // Cukup letakkan foto di folder `public` dan ubah `src`
   const initialPhotos = [
-    { src: 'photos/IMG_9286.jpg', alt: 'Momen Indah Kita', caption: 'Setiap momen bersamamu adalah kenangan yang tak terlupakan.' },
+    { src: 'https://placehold.co/800x600/FFC0CB/542F4B?text=Momen+1', alt: 'Momen Indah Kita', caption: 'Setiap momen bersamamu adalah kenangan yang tak terlupakan.' },
     { src: 'https://placehold.co/600x800/E6E6FA/542F4B?text=Liburan+Kita', alt: 'Liburan di Pantai', caption: 'Gelombang laut dan senyumanmu, kombinasi sempurna.' },
     { src: 'https://placehold.co/800x600/DDA0DD/542F4B?text=Jalan+Sore', alt: 'Jalan-jalan Sore', caption: 'Menikmati sore yang tenang, hanya kita berdua.' },
     { src: 'https://placehold.co/600x800/F0E68C/542F4B?text=Di+Kafe+Favorit', alt: 'Kafe Favorit', caption: 'Tempat di mana cerita kita bermula.' },
