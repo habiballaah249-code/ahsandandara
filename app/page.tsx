@@ -1,7 +1,6 @@
 "use client";
 
-import { useState, useEffect } from 'react';
-import { X as CloseIcon } from 'lucide-react';
+import { useState } from 'react';
 
 // Main App component
 export default function App() {
@@ -9,8 +8,14 @@ export default function App() {
   // Anda bisa mengganti data ini dengan foto pribadi Anda
   // Cukup letakkan foto di folder `public` dan ubah `src`
   const initialPhotos = [
-    { src: 'photos/IMG_9286.jpg', alt: 'Momen Indah Kita', caption: 'Ahsan sama Dara di Museum Tsunami Banda Aceh' },
-    
+    { src: 'photos/IMG_9286.jpg', alt: 'Momen Indah Kita', caption: 'Setiap momen bersamamu adalah kenangan yang tak terlupakan.' },
+    { src: 'https://placehold.co/600x800/E6E6FA/542F4B?text=Liburan+Kita', alt: 'Liburan di Pantai', caption: 'Gelombang laut dan senyumanmu, kombinasi sempurna.' },
+    { src: 'https://placehold.co/800x600/DDA0DD/542F4B?text=Jalan+Sore', alt: 'Jalan-jalan Sore', caption: 'Menikmati sore yang tenang, hanya kita berdua.' },
+    { src: 'https://placehold.co/600x800/F0E68C/542F4B?text=Di+Kafe+Favorit', alt: 'Kafe Favorit', caption: 'Tempat di mana cerita kita bermula.' },
+    { src: 'https://placehold.co/800x600/FFA07A/542F4B?text=Kenangan+Manis', alt: 'Kenangan Manis', caption: 'Setiap foto memiliki ceritanya sendiri, dan ini adalah salah satu favoritku.' },
+    { src: 'https://placehold.co/600x800/87CEEB/542F4B?text=Hari+Yang+Ceria', alt: 'Hari Ceria Bersamamu', caption: 'Tawamu adalah musik terindah yang pernah kudengar.' },
+    { src: 'https://placehold.co/800x600/FFE4E1/542F4B?text=Kita+Selamanya', alt: 'Selalu Bersama', caption: 'Bersamamu, aku merasa di rumah.' },
+    { src: 'https://placehold.co/600x800/F5DEB3/542F4B?text=Ulang+Tahun', alt: 'Kejutan Ulang Tahun', caption: 'Terima kasih untuk kejutan yang manis.' },
   ];
 
   // State untuk melacak foto yang sedang dipilih (untuk modal)
@@ -31,10 +36,10 @@ export default function App() {
       {/* Header Utama */}
       <header className="py-12 px-6 text-center">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif text-pink-700 tracking-wide leading-tight animate-fade-in-down">
-          Album Kenangan Ahsan dan Dara
+          Album Kenangan Kita
         </h1>
         <p className="mt-4 text-md sm:text-lg text-pink-500 italic animate-fade-in-up">
-          Galeri foto selama ketemu di Banda Aceh
+          Kumpulan setiap momen indah dan romantis
         </p>
       </header>
 
@@ -74,12 +79,12 @@ export default function App() {
             className="relative max-w-full lg:max-w-4xl max-h-[90vh] flex flex-col items-center justify-center"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Tombol tutup modal */}
+            {/* Tombol tutup modal menggunakan SVG inline */}
             <button
               onClick={handleCloseModal}
               className="absolute top-4 right-4 z-50 text-white bg-white/20 p-2 rounded-full hover:bg-white/40 transition-colors duration-200"
             >
-              <CloseIcon size={24} />
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
             </button>
 
             {/* Gambar besar di dalam modal */}
